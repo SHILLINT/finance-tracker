@@ -1,0 +1,205 @@
+/* ===== GLOBAL ===== */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg: #f5f6fa;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --border: #e2e8f0;
+  --card: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.navbar button {
+  background: var(--danger);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: #b91c1c;
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background-color: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+/* Totals Grid */
+.totals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.total-card {
+  text-align: center;
+  border-radius: 10px;
+  background: var(--bg);
+  padding: 12px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.03);
+}
+
+.total-card h4 {
+  margin: 6px 0 4px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.total-card p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ===== TRANSACTION FORM ===== */
+.transaction-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  background-color: var(--bg);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.transaction-form .form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+}
+
+.transaction-form label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.transaction-form button {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.transaction-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ===== TRANSACTION TABLE ===== */
+.transactions-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-list th {
+  text-align: left;
+  background: #f9fafb;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.transactions-list td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.transactions-list tr:hover {
+  background-color: #f1f5f9;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* ===== CHARTS ===== */
+.charts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+}
